@@ -11,7 +11,7 @@ mkdir -p /work/artifact
 cd $WORKSPACE
 git clone https://github.com/mirror/xmlrpc-c.git
 cd xmlrpc-c/trunk
-CCFLAGS="-std=c++17" CXXFLAGS="-std=c++17" LDFLAGS="-static -no-pie -s" ./configure --prefix=/usr --enable-libxml2-backend
+CFLAGS="-std=gnu17" CXXFLAGS="-std=gnu17" LDFLAGS="-static -no-pie -s" ./configure --prefix=/usr --enable-libxml2-backend
 make
 make install
 
