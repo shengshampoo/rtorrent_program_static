@@ -18,7 +18,7 @@ make install
 # ncurses
 cd $WORKSPACE
 aa=6.6
-curl -sL https://invisible-mirror.net/archives/ncurses/ncurses-$aa.tar.gz | tar xv --gzip
+curl -sL https://invisible-mirror.net/archives/ncurses/ncurses-$aa.tar.gz | tar x --gzip
 cd ncurses-$aa
 ./configure --prefix=/usr  --without-shared --enable-pc-files --enable-overwrite --with-termlib --with-pkg-config-libdir=/usr/lib/pkgconfig
 make
