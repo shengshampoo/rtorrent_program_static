@@ -68,4 +68,4 @@ make install
 cd /usr/local
 tar vcJf ./rtorrentmm.tar.xz rtorrentmm
 
-mv ./rtorentmm.tar.xz /work/artifact/
+mv ./rtorrentmm.tar.xz /work/artifact/
