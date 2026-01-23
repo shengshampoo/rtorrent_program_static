@@ -15,7 +15,7 @@ RUN apk add --no-cache \
   c-ares-static c-ares-dev nghttp2-static nghttp2-dev libpsl-static \
   libpsl-dev xz-static xz-dev zstd-dev zstd-static \
   libssh2-dev libssh2-static libunistring-static \
-  libunistring-dev cmake ninja bash xz
+  libunistring-dev cmake ninja bash xz libtool autoconf automake
 
 ENV XZ_OPT=-e9
 COPY build-static-rtorrent.sh build-static-rtorrent.sh
