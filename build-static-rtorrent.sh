@@ -15,15 +15,6 @@ LDFLAGS="-static -no-pie -s" ./configure --prefix=/usr --enable-libxml2-backend
 make CFLAGS="-std=gnu17" CCFLAGS="-std=gnu17" CXXFLAGS="-std=gnu17" 
 make install
 
-# libtorrent
-cd $WORKSPACE
-git clone https://github.com/rakshasa/libtorrent.git
-cd libtorrent
-autoreconf -fi
-LDFLAGS="-static -no-pie -s" ./configure --prefix=/usr
-make
-make install
-
 # ncurses
 cd $WORKSPACE
 aa=6.6
@@ -54,6 +45,15 @@ cd curl
 autoreconf -fi
 CFLAGS=-static LDFLAGS="-static --static -no-pie -s -lnghttp2 -lidn2 -lpsl -lssh2 -lunistring -lbrotlienc -lbrotlidec -lbrotlicommon " \
 ./configure --prefix=/usr --with-openssl --disable-shared --with-libidn2 --disable-docs --with-libssh2 --with-libpsl --enable-ares
+make
+make install
+
+# libtorrent
+cd $WORKSPACE
+git clone https://github.com/rakshasa/libtorrent.git
+cd libtorrent
+autoreconf -fi
+LDFLAGS="-static -no-pie -s" ./configure --prefix=/usr
 make
 make install
 
